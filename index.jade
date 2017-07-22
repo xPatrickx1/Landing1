@@ -1,0 +1,91 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+
+        title Landing1
+
+        link(href='lib/bootstrap.min.css', rel='stylesheet')
+        link(href='lib/jquery.fullPage.css', rel='stylesheet')
+        link(href='src/styles/style.css', rel='stylesheet')
+
+        script(type='text/javascript', src='http://code.jquery.com/jquery-latest.min.js')
+        script(type="text/javascript" src="lib/jquery.fullPage.js")
+        script(type="text/javascript" src="lib/jquery.slimscroll.min.js")
+        script(type="text/javascript" src="js/main.js")
+
+body
+  header#header
+
+
+    .container
+      .heat.mov.animation
+        a.logo(href='index.html')
+          svg(width='65', height='65')
+            rect.logo_rect(x='5', y='5', width='55', height='55', fill='transparent', stroke='#000', stroke-width='2')
+            line.logo_line(x1='60', y1='5', x2='5', y2='60', stroke='#000', stroke-width='2')
+        nav.menu
+          ul.menu__list.list.animation
+            li.list__item(data-menuanchor='section1')
+              a.list__link(href='section1') services
+            li.list__item(data-menuanchor='section2')
+              a.list__link(href='#section2') clients
+            li.list__item(data-menuanchor='section3')
+              a.list__link(href='#section3') team
+            li.list__item(data-menuanchor='section4')
+              a.list__link(href='#section4') contact
+        nav.mobile
+          button.menu_button Toggle
+            .icon
+          .mobile_menu
+            ul.mobile__list
+              li.list__item
+                a.list__link(href='work.html') services
+              li.list__item
+                a.list__link(href='about_us.html') clients
+              li.list__item
+                a.list__link(href='contact.html') team
+              li.list__item
+                a.list__link(href='contact.html') contact
+
+
+
+  #fullpage
+    .section#section0
+      .loop-wrapper
+        video.video-loop(muted="muted" loop="loop")
+          source(data-src='video.webm', type='video/webm')
+          source(data-src='GOPR1014.mp4', type='video/mp4')
+      .row
+        .content
+
+          h2.title1 we are a
+          h1.title2
+            | video production
+            =' '
+            br
+            |company
+          botton.play_video(src='play.png')
+
+
+    .section#section1 Some section1
+    .section#section2 Some section2
+    .section#section3 Some section3
+    .section#section4 Some section4
+
+
+
+
+
+
+
+
+
+
+
+    // jQuery (necessary for Bootstrap's JavaScript plugins)
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+        // Include all compiled plugins (below), or include individual files as needed
+        script(src='js/bootstrap.min.js')
