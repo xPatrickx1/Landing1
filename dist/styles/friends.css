@@ -1,0 +1,84 @@
+.friends {
+  width: 90%;
+  margin-left: 100px;
+}
+.friends__container {
+  width: 100%;
+  overflow: hidden;
+  vertical-align: inherit;
+  margin: 25px 0;
+}
+.friends__main {
+  font-family: 'anton-regular';
+  text-transform: lowercase;
+  font-weight: bold;
+  font-size: 5.6em;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  height: 70px;
+  overflow: hidden;
+}
+.friends__line {
+  background: #000;
+  height: 4px;
+  min-width: 30%;
+  width: 46%;
+  display: inline-block;
+  position: relative;
+  left: 60px;
+}
+.friends__image {
+  margin-top: 50px;
+}
+.carousel {
+  width: 92%;
+  margin: 0 auto;
+}
+.carousel-inner {
+  width: 75%;
+  min-width: 770px;
+  margin: 0 auto;
+}
+.carousel-item {
+  height: 300px;
+  background: #fff;
+}
+.friend__logo {
+  background: url(../../source/pepsifriend.png) no-repeat;
+  width: 180px;
+  background-size: contain;
+  margin-left: 6%;
+  margin-top: 100px;
+  position: relative;
+}
+.friend__about {
+  width: 62%;
+  position: absolute;
+  font-size: 1.2em;
+  left: 40%;
+  top: 50px;
+}
+.person {
+  position: absolute;
+  bottom: 34px;
+  right: 20%;
+  height: 60px;
+}
+.person__avatar {
+  width: 55px;
+  height: 55px;
+  background: url("../../source/pepsiface.png") no-repeat;
+  background-size: contain;
+  display: inline-block;
+  position: relative;
+}
+.person__name {
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 2.2em;
+  bottom: 20px;
+  left: 20px;
+  position: relative;
+}

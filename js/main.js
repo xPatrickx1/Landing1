@@ -1,3 +1,7 @@
 $(document).ready(function() {
-    $('#fullpage').fullpage();
+
+    $('.menu_button').click(function() {
+        $(this).toggleClass('expanded').siblings('div').slideToggle();
+    });
+
 });

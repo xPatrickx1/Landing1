@@ -1,91 +1,210 @@
 doctype html
 html(lang='en')
-    head
-        meta(charset='utf-8')
-        meta(http-equiv='X-UA-Compatible', content='IE=edge')
-        meta(name='viewport', content='width=device-width, initial-scale=1')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Landing1
+    link(href='lib/bootstrap.css', rel='stylesheet')
+    link(href='src/styles/style.css', rel='stylesheet')
+    link(href='src/styles/about.css', rel='stylesheet')
+    link(href='src/styles/services.css', rel='stylesheet')
+    link(href='src/styles/friends.css', rel='stylesheet')
 
-        title Landing1
 
-        link(href='lib/bootstrap.min.css', rel='stylesheet')
-        link(href='lib/jquery.fullPage.css', rel='stylesheet')
-        link(href='src/styles/style.css', rel='stylesheet')
+    //link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css', integrity='sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ', crossorigin='anonymous')
+    script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js', integrity='sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n', crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js', integrity='sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb', crossorigin='anonymous')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js', integrity='sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn', crossorigin='anonymous')
 
-        script(type='text/javascript', src='http://code.jquery.com/jquery-latest.min.js')
-        script(type="text/javascript" src="lib/jquery.fullPage.js")
-        script(type="text/javascript" src="lib/jquery.slimscroll.min.js")
-        script(type="text/javascript" src="js/main.js")
 
+
+    script(type="text/javascript", src="lib/jquery-3.2.1.min.js")
+    //script(type='text/javascript', src='http://code.jquery.com/jquery-latest.min.js')
+    script(type="text/javascript" src="js/main.js")
 body
-  header#header
 
+  .section#section0
+    header#header
+      a.logo(href='index.html')
+        span.logo__img
 
-    .container
-      .heat.mov.animation
-        a.logo(href='index.html')
-          svg(width='65', height='65')
-            rect.logo_rect(x='5', y='5', width='55', height='55', fill='transparent', stroke='#000', stroke-width='2')
-            line.logo_line(x1='60', y1='5', x2='5', y2='60', stroke='#000', stroke-width='2')
-        nav.menu
-          ul.menu__list.list.animation
-            li.list__item(data-menuanchor='section1')
-              a.list__link(href='section1') services
-            li.list__item(data-menuanchor='section2')
-              a.list__link(href='#section2') clients
-            li.list__item(data-menuanchor='section3')
-              a.list__link(href='#section3') team
-            li.list__item(data-menuanchor='section4')
-              a.list__link(href='#section4') contact
-        nav.mobile
-          button.menu_button Toggle
+      nav.mobile-menu
+        label.show-menu(for='show-menu')
+          span Menu
+          #nav-icon3
+            span
+            span
+            span
+            span
+        input#show-menu(type='checkbox')
+        ul#menu
+          li
+            a(href='#') Home
+          li
+            a(href='#') About
+          li
+            a(href='#') Portfolio
+          li
+            a(href='#') News
+          li
+            a(href='#') Contact
+
+      #nav-icon3
+        span
+        span
+        span
+        span
+
+    //nav.menu#menu
+        ul.menu__list.list.animation
+          li.list__item
+            a.list__link(href='#section1') services
+          li.list__item
+            a.list__link(href='#section2') clients
+          li.list__item
+            a.list__link(href='#section3') team
+          li.list__item
+            a.list__link(href='#section4') contact
+      //nav.mobile
+        button.menu_button Toggle
             .icon
           .mobile_menu
             ul.mobile__list
               li.list__item
-                a.list__link(href='work.html') services
+                a.list__link(href='#section1') services
               li.list__item
-                a.list__link(href='about_us.html') clients
+                a.list__link(href='#section2') clients
               li.list__item
-                a.list__link(href='contact.html') team
+                a.list__link(href='#section3') team
               li.list__item
-                a.list__link(href='contact.html') contact
+                a.list__link(href='#section4') contact
+      // http://jsfiddle.net/BeUFb/326/ - videobotton
+    .fullscreen-bg
+      video.fullscreen-bg__video(loop='loop', muted='muted', autoplay='autoplay', poster='source/logo.jpg')
 
-
-
-  #fullpage
-    .section#section0
-      .loop-wrapper
-        video.video-loop(muted="muted" loop="loop")
-          source(data-src='video.webm', type='video/webm')
-          source(data-src='GOPR1014.mp4', type='video/mp4')
-      .row
-        .content
-
-          h2.title1 we are a
-          h1.title2
-            | video production
-            =' '
-            br
-            |company
-          botton.play_video(src='play.png')
-
-
-    .section#section1 Some section1
-    .section#section2 Some section2
-    .section#section3 Some section3
-    .section#section4 Some section4
+        source(src='source/GOPR1014.mp4', type='video/mp4')
+        source(src='video/GOPR1014.ogv', type='video/ogg')
+    article
+        h2.title_small we are a
+        h1.title_big
+          | video production
+          =' '
+          br
+          |company
+        .play__botton
+          a.play__link()
+            img.play__image(width='64', src='source/play.png')
 
 
 
 
+  .section#section1
+    .container
+      .about
+        h1.about__main about us
+        .about__line
+      .about__article
+        h3.about__info 21 films is a full-service creative agency that produces content for screens of all sizes.
+        p.about__text From concept deploiment and manager throught production and post, we offer full-service video solution for the worlds landing brands and agencies.
+
+
+
+
+  .section#section2
+    .container
+      .services
+        .services__line
+        h1.services__main services
+      .services__article
+        h3.services__info we specialize in blending language, imagery, music, color, and sound into stories thst deliver emotion and impact.
+        p.services__text There are meni different style of video, but in the end it`s all sbout finding the style that for you story need. We`re here to help you figure that out.
+    ul.services__list
+      li.services__item
+        a.services__link
+          .services__group
+            .services__sprite.sprite__commercial
+            h3.services__name
+                              |commercial/
+                              =' '
+                              br
+                              |advertising
+          p.services__about_text There are meni different style of video, but in the end it`s all sbout finding the style that for you story need. We`re here to help you figure that out.
+      li.services__item
+        a.services__link
+          .services__group
+            .services__sprite.sprite__photo
+            h3.services__name
+                              |photo
+                              =''
+                              br
+                              |production
+          p.services__about_text There are meni different style of video, but in the end it`s all sbout finding the style that for you story need. We`re here to help you figure that out.
+      li.services__item
+        a.services__link
+          .services__group
+            .services__sprite.sprite__video
+            h3.services__name
+                              |corporate
+                              =''
+                              br
+                              |videos
+          p.services__about_text There are meni different style of video, but in the end it`s all sbout finding the style that for you story need. We`re here to help you figure that out.
+      li.services__item
+        a.services__link
+          .services__group.col-xl-2
+            .services__sprite.sprite__creative
+            h3.services__name creative
+          p.services__about_text There are meni different style of video, but in the end it`s all sbout finding the style that for you story need. We`re here to help you figure that out.
+
+
+
+  .section#section3
+    .container
+      .friends
+        .friends__container
+          h1.friends__main friends
+        .friends__container
+          h1.friends__main and clients
+          .friends__line
+      img.friends__image(src='source/friends.jpg', width='100%')
+
+      #carouselExampleIndicators.carousel.slide(data-ride='carousel')
+        .carousel-inner(role='listbox')
+          .carousel-item.active
+            .friend__logo
+            p.friend__about At Pepsi we are really big on a lean environment, solving 70-80% of all qualitative problems using great prototyping tools. InVision makes our product more real and the process easier for our executives to understand
+            .person
+              .person__avatar
+              .person__name Sally Mendez
+          .carousel-item
+            .friend__logo
+            p.friend__about At Pepsi we are really big on a lean environment, solving 70-80% of all qualitative problems using great prototyping tools. InVision makes our product more real and the process easier for our executives to understand
+            .person
+              .person__avatar
+              .person__name Sally Mendez
+          .carousel-item
+            .friend__logo
+            p.friend__about At Pepsi we are really big on a lean environment, solving 70-80% of all qualitative problems using great prototyping tools. InVision makes our product more real and the process easier for our executives to understand
+            .person
+              .person__avatar
+              .person__name Sally Mendez
+
+        a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-slide='prev')
+          svg(width="50px" height="60px" viewBox="-10 0 50 40" xml:space="preserve" class="scrollup__arrow")
+            polyline(fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points=" 20,0 0,20 20,40  ")
+          span.sr-only Previous
+        a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
+          svg(width="50px" height="60px" viewBox="0 0 50 40" xml:space="preserve" class="scrollup__arrow")
+            polyline(fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points=" 20,0 40,20 20,40 ")
+          span.sr-only Next
 
 
 
 
 
-
-
-    // jQuery (necessary for Bootstrap's JavaScript plugins)
-        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
-        // Include all compiled plugins (below), or include individual files as needed
-        script(src='js/bootstrap.min.js')
+   .section#section4 Some section4
+  // jQuery (necessary for Bootstrap's JavaScript plugins)
+      script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+      // Include all compiled plugins (below), or include individual files as needed
+      script(src='js/bootstrap.min.js')

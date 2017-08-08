@@ -1,0 +1,151 @@
+#section1 {
+  background: #fff;
+}
+
+.about {
+  width: 270px;
+  height: 60px;
+  overflow: hidden;
+  vertical-align: inherit;
+  margin: 8% auto;
+
+  &__main {
+    font-family: 'impact';
+    text-transform: lowercase;
+    font-weight: bold;
+    font-size: 7.4rem;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  &__line {
+    background: #000;
+    height: 4px;
+    min-width: 30%;
+    width: 50%;
+    display: inline-block;
+    margin: 12px 70px;
+  }
+
+  &__article {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 500px;
+  }
+
+  &__info {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin: 30px 0;
+  }
+
+  &__text {
+    font-size: 1.4em;
+  }
+}
+
+
+
+@media (min-width: 768px) {
+  .about {
+    width: 350px;
+    height: 67px;
+
+    &__main {
+      font-size: 8.4rem;
+    }
+
+    &__article {
+      max-width: 500px;
+    }
+
+    &__info {
+      font-size: 1.7em;
+    }
+
+    &__text {
+      font-size: 1.5em;
+    }
+  }
+  }
+
+
+
+@media screen and (min-width: 992px) {
+
+.about {
+  width: 100%;
+  height: 76px;
+  margin: 10% 10% 50px;
+
+  &__main {
+    font-size: 9.4rem;
+}
+
+  &__line {
+    min-width: 30%;
+    width: 40%;
+    margin: 12px 70px;
+  }
+
+  &__article {
+    width: 40%;
+    float: right;
+    right: 7%;
+    position: relative;
+  }
+
+  &__info {
+    font-size: 2.3em;
+  }
+
+  &__text {
+    font-size: 1.4em;
+  }
+}
+}
+
+
+@media screen and (min-width: 1200px) {
+
+  .about {
+    width: 100%;
+    height: 76px;
+    overflow: hidden;
+    vertical-align: inherit;
+    margin: 10% 10% 50px;
+
+    &__main {
+      text-transform: lowercase;
+      font-weight: bold;
+      font-size: 9.4rem;
+      display: inline-block;
+    }
+
+    &__line {
+      background: #000;
+      height: 4px;
+      min-width: 30%;
+      width: 50%;
+      display: inline-block;
+      margin: 12px 70px;
+    }
+
+    &__article {
+      width: 40%;
+      float: right;
+      right: 14%;
+      position: relative;
+    }
+
+    &__info {
+      font-size: 2.3em;
+    }
+
+    &__text {
+      font-size: 1.4em;
+    }
+  }
+}
