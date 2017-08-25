@@ -1,0 +1,340 @@
+.animation {
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+
+.animation.about__line {
+  display: inline-block;
+  animation: setPosLeft 1s ease forwards;
+  transition-delay: 0s;
+  animation-duration: 1s;
+  animation-delay: 0s;
+}
+
+.animation.service__line {
+  display: inline-block;
+  animation: setPosRight 1s ease forwards;
+  transition-delay: 0s;
+  animation-duration: 1s;
+  animation-delay: 0s;
+}
+
+.animation.friends__line {
+  display: inline-block;
+  animation: setPosLeftFriends 1s ease forwards;
+  transition-delay: 0s;
+  animation-duration: 1s;
+  animation-delay: 0s;
+}
+
+.animation.team__line {
+  display: inline-block;
+  animation: setPosLeftTeam 1s ease forwards;
+  transition-delay: 0s;
+  animation-duration: 1s;
+  animation-delay: 0s;
+}
+
+.animation.contact__line {
+  display: inline-block;
+  animation: setPosLeftFriends 3.4s ease forwards;
+  transition-delay: 0s;
+  animation-duration: 1s;
+  animation-delay: 0s;
+}
+
+
+.animation.friends__image {
+  display: inline-block;
+  animation: setPosImg 0.4s ease forwards;
+  transition-delay: 0s;
+  animation-duration: 0.4s;
+  animation-delay: 0.6s;
+}
+
+.animation.team__photocut {
+  animation: setWidthCenter 0.4s ease forwards;
+  transition-delay: 0s;
+  animation-duration: 1s;
+  animation-delay: 0.6s;
+}
+
+.animation.team__photo{
+  animation: setPosTeamPhoto 0.4s ease forwards;
+  transition-delay: 0s;
+  animation-duration: 0.4s;
+  animation-delay: 0.6s;
+}
+
+.animation.team__name {
+  animation: setPosTeam 0.4s ease forwards;
+  animation-delay: 0.8s;
+}
+
+
+
+.animation.team__position {
+  animation: setPosTeam 0.4s ease forwards;
+  animation-delay: 0.7s;
+}
+
+.carousel {
+  animation: setCarousel 0.4s ease forwards;
+  transition-delay: 0s;
+  animation-duration: 0.4s;
+  animation-delay: 0.6s;
+}
+
+.animation.service__group {
+  display: block;
+  animation: flipInY 0.4s ease forwards;
+  transition-delay: 0s;
+  animation-duration: 1s;
+  animation-delay: 0s;
+}
+
+@keyframes flipInY {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+}
+
+@keyframes setCarousel {
+  from {
+    opacity:0;
+    top: -200px;
+  }
+
+  to {
+    opacity:1;
+    top: 0;
+
+
+  }
+}
+
+
+@keyframes setPosTeamPhoto {
+  from {
+    top: 100%;
+  }
+
+  to {
+    top: 0;
+
+
+  }
+}
+
+
+@keyframes setPosTeam {
+  from {
+    top: -120px;
+  }
+
+  to {
+    top: 0;
+  }
+}
+
+@keyframes setWidth {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+
+@keyframes setWidthCenter {
+  from {
+    margin-left: 0;
+    width: 0;
+  }
+
+  30% {
+    margin-left: -50%;
+    width: 100%;
+  }
+  70% {
+    margin-left: -50%;
+    width: 100%;
+  }
+
+
+  to {
+    margin-left: 0;
+    width: 0;
+  }
+}
+
+
+@keyframes setPosImg {
+  from {
+    top: -100%;
+  }
+
+  to {
+    top: 0;
+
+
+  }
+}
+
+
+@keyframes setPosLeft {
+  from {
+    left: -100%;
+  }
+
+  20% {
+    left:-70%;
+  }
+
+  60% {
+    left: 20%;
+  }
+
+  to {
+    left: 44%;
+
+
+  }
+}
+
+@keyframes setPosLeftFriends {
+  from {
+    left: -100%;
+  }
+
+  20% {
+    left:-70%;
+  }
+
+  60% {
+    left: 20%;
+  }
+
+  to {
+    left: 54%;
+
+
+  }
+}
+
+
+@keyframes setPosLeftTeam {
+  from {
+    right: -100%;
+  }
+
+  20% {
+    right:-70%;
+  }
+
+  60% {
+    right: 20%;
+  }
+
+  to {
+    right: 34%;
+
+
+  }
+}
+
+
+
+@keyframes setPosRight {
+  from {
+    right: -100%;
+  }
+
+  20% {
+    right:-70%;
+  }
+
+  60% {
+    right: 20%;
+  }
+
+  to {
+    right: 44%;
+
+
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  @keyframes setPosLeft {
+    from {
+      left: -100%;
+    }
+
+    50% {
+      left:-50%;
+    }
+
+    to {
+      left: 0;
+    }
+  }
+
+
+@keyframes setPosRight {
+  from {
+    right: -100%;
+  }
+
+  50% {
+    right:-50%;
+  }
+
+  to {
+    right: 0;
+  }
+}
+
+  @keyframes setPosLeftFriends {
+    from {
+      left: -100%;
+    }
+
+    50% {
+      left:-50%;
+    }
+
+    to {
+      left: 0;
+    }
+  }
+
+
+  @keyframes setPosLeftTeam {
+    from {
+      right: -100%;
+    }
+
+
+    to {
+      right: 0;
+    }
+  }
+
+
+}

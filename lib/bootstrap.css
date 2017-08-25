@@ -3111,6 +3111,12 @@ input[type="button"].btn-block {
   display: none;
 }
 
+@media screen and (min-width: 992px) {
+  .collapse {
+  display: block;
+  }
+}
+
 .collapse.show {
   display: block;
 }

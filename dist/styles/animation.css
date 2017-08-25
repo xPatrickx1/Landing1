@@ -1,0 +1,471 @@
+.animation {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.animation.about__line {
+  display: inline-block;
+  -webkit-animation: setPosLeft 1s ease forwards;
+          animation: setPosLeft 1s ease forwards;
+  transition-delay: 0s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.animation.service__line {
+  display: inline-block;
+  -webkit-animation: setPosRight 1s ease forwards;
+          animation: setPosRight 1s ease forwards;
+  transition-delay: 0s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.animation.friends__line {
+  display: inline-block;
+  -webkit-animation: setPosLeftFriends 1s ease forwards;
+          animation: setPosLeftFriends 1s ease forwards;
+  transition-delay: 0s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.animation.team__line {
+  display: inline-block;
+  -webkit-animation: setPosLeftTeam 1s ease forwards;
+          animation: setPosLeftTeam 1s ease forwards;
+  transition-delay: 0s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.animation.contact__line {
+  display: inline-block;
+  -webkit-animation: setPosLeftFriends 3.4s ease forwards;
+          animation: setPosLeftFriends 3.4s ease forwards;
+  transition-delay: 0s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.animation.friends__image {
+  display: inline-block;
+  -webkit-animation: setPosImg 0.4s ease forwards;
+          animation: setPosImg 0.4s ease forwards;
+  transition-delay: 0s;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.animation.team__photocut {
+  -webkit-animation: setWidthCenter 0.4s ease forwards;
+          animation: setWidthCenter 0.4s ease forwards;
+  transition-delay: 0s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.animation.team__photo {
+  -webkit-animation: setPosTeamPhoto 0.4s ease forwards;
+          animation: setPosTeamPhoto 0.4s ease forwards;
+  transition-delay: 0s;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.animation.team__name {
+  -webkit-animation: setPosTeam 0.4s ease forwards;
+          animation: setPosTeam 0.4s ease forwards;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+.animation.team__position {
+  -webkit-animation: setPosTeam 0.4s ease forwards;
+          animation: setPosTeam 0.4s ease forwards;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+.carousel {
+  -webkit-animation: setCarousel 0.4s ease forwards;
+          animation: setCarousel 0.4s ease forwards;
+  transition-delay: 0s;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.animation.service__group {
+  display: block;
+  -webkit-animation: flipInY 0.4s ease forwards;
+          animation: flipInY 0.4s ease forwards;
+  transition-delay: 0s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+@-webkit-keyframes flipInY {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+}
+@keyframes flipInY {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes setCarousel {
+  from {
+    opacity: 0;
+    top: -200px;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+@keyframes setCarousel {
+  from {
+    opacity: 0;
+    top: -200px;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+@-webkit-keyframes setPosTeamPhoto {
+  from {
+    top: 100%;
+  }
+  to {
+    top: 0;
+  }
+}
+@keyframes setPosTeamPhoto {
+  from {
+    top: 100%;
+  }
+  to {
+    top: 0;
+  }
+}
+@-webkit-keyframes setPosTeam {
+  from {
+    top: -120px;
+  }
+  to {
+    top: 0;
+  }
+}
+@keyframes setPosTeam {
+  from {
+    top: -120px;
+  }
+  to {
+    top: 0;
+  }
+}
+@-webkit-keyframes setWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes setWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@-webkit-keyframes setWidthCenter {
+  from {
+    margin-left: 0;
+    width: 0;
+  }
+  30% {
+    margin-left: -50%;
+    width: 100%;
+  }
+  70% {
+    margin-left: -50%;
+    width: 100%;
+  }
+  to {
+    margin-left: 0;
+    width: 0;
+  }
+}
+@keyframes setWidthCenter {
+  from {
+    margin-left: 0;
+    width: 0;
+  }
+  30% {
+    margin-left: -50%;
+    width: 100%;
+  }
+  70% {
+    margin-left: -50%;
+    width: 100%;
+  }
+  to {
+    margin-left: 0;
+    width: 0;
+  }
+}
+@-webkit-keyframes setPosImg {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
+}
+@keyframes setPosImg {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
+}
+@-webkit-keyframes setPosLeft {
+  from {
+    left: -100%;
+  }
+  20% {
+    left: -70%;
+  }
+  60% {
+    left: 20%;
+  }
+  to {
+    left: 44%;
+  }
+}
+@keyframes setPosLeft {
+  from {
+    left: -100%;
+  }
+  20% {
+    left: -70%;
+  }
+  60% {
+    left: 20%;
+  }
+  to {
+    left: 44%;
+  }
+}
+@-webkit-keyframes setPosLeftFriends {
+  from {
+    left: -100%;
+  }
+  20% {
+    left: -70%;
+  }
+  60% {
+    left: 20%;
+  }
+  to {
+    left: 54%;
+  }
+}
+@keyframes setPosLeftFriends {
+  from {
+    left: -100%;
+  }
+  20% {
+    left: -70%;
+  }
+  60% {
+    left: 20%;
+  }
+  to {
+    left: 54%;
+  }
+}
+@-webkit-keyframes setPosLeftTeam {
+  from {
+    right: -100%;
+  }
+  20% {
+    right: -70%;
+  }
+  60% {
+    right: 20%;
+  }
+  to {
+    right: 34%;
+  }
+}
+@keyframes setPosLeftTeam {
+  from {
+    right: -100%;
+  }
+  20% {
+    right: -70%;
+  }
+  60% {
+    right: 20%;
+  }
+  to {
+    right: 34%;
+  }
+}
+@-webkit-keyframes setPosRight {
+  from {
+    right: -100%;
+  }
+  20% {
+    right: -70%;
+  }
+  60% {
+    right: 20%;
+  }
+  to {
+    right: 44%;
+  }
+}
+@keyframes setPosRight {
+  from {
+    right: -100%;
+  }
+  20% {
+    right: -70%;
+  }
+  60% {
+    right: 20%;
+  }
+  to {
+    right: 44%;
+  }
+}
+@media screen and (max-width: 767px) {
+  @-webkit-keyframes setPosLeft {
+    from {
+      left: -100%;
+    }
+    50% {
+      left: -50%;
+    }
+    to {
+      left: 0;
+    }
+  }
+  @keyframes setPosLeft {
+    from {
+      left: -100%;
+    }
+    50% {
+      left: -50%;
+    }
+    to {
+      left: 0;
+    }
+  }
+  @-webkit-keyframes setPosRight {
+    from {
+      right: -100%;
+    }
+    50% {
+      right: -50%;
+    }
+    to {
+      right: 0;
+    }
+  }
+  @keyframes setPosRight {
+    from {
+      right: -100%;
+    }
+    50% {
+      right: -50%;
+    }
+    to {
+      right: 0;
+    }
+  }
+  @-webkit-keyframes setPosLeftFriends {
+    from {
+      left: -100%;
+    }
+    50% {
+      left: -50%;
+    }
+    to {
+      left: 0;
+    }
+  }
+  @keyframes setPosLeftFriends {
+    from {
+      left: -100%;
+    }
+    50% {
+      left: -50%;
+    }
+    to {
+      left: 0;
+    }
+  }
+  @-webkit-keyframes setPosLeftTeam {
+    from {
+      right: -100%;
+    }
+    to {
+      right: 0;
+    }
+  }
+  @keyframes setPosLeftTeam {
+    from {
+      right: -100%;
+    }
+    to {
+      right: 0;
+    }
+  }
+}

@@ -7,21 +7,14 @@ html(lang='en')
     title Landing1
     link(href='lib/bootstrap.css', rel='stylesheet')
     link(href='src/styles/style.css', rel='stylesheet')
-    link(href='src/styles/about.css', rel='stylesheet')
-    link(href='src/styles/services.css', rel='stylesheet')
-    link(href='src/styles/friends.css', rel='stylesheet')
+    link(rel="icon", type="image/png", href="../../source/favicon.png")
 
-
-    //link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css', integrity='sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ', crossorigin='anonymous')
-    script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js', integrity='sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n', crossorigin='anonymous')
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
     script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js', integrity='sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb', crossorigin='anonymous')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js', integrity='sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn', crossorigin='anonymous')
 
-
-
-    script(type="text/javascript", src="lib/jquery-3.2.1.min.js")
-    //script(type='text/javascript', src='http://code.jquery.com/jquery-latest.min.js')
     script(type="text/javascript" src="js/main.js")
+
 body
 
   .section#section0
@@ -29,145 +22,146 @@ body
       a.logo(href='index.html')
         span.logo__img
 
-      nav.mobile-menu
-        label.show-menu(for='show-menu')
-          span Menu
-          #nav-icon3
-            span
-            span
-            span
-            span
-        input#show-menu(type='checkbox')
-        ul#menu
-          li
-            a(href='#') Home
-          li
-            a(href='#') About
-          li
-            a(href='#') Portfolio
-          li
-            a(href='#') News
-          li
-            a(href='#') Contact
+    nav.menu#menu
+          ul.menu__list.list.animation
+            li.list__item
+              a.list__link(href='#section2') services
+            li.list__item
+              a.list__link(href='#section3') clients
+            li.list__item
+              a.list__link(href='#section4') team
+            li.list__item
+              a.list__link(href='#section5') contact
+        nav.mobile
+          button.menu_button Toggle
+              .icon
+            .mobile__menu#mySidenav.sidenav
 
-      #nav-icon3
-        span
-        span
-        span
-        span
+              ul.mobile__list
+                li.mobile__item
+                  a.mobile__link(href='#section1') about us
+                li.mobile__item
+                  a.mobile__link(href='#section2') services
+                li.mobile__item
+                  a.mobile__link(href='#section3') clients
+                li.mobile__item
+                  a.mobile__link(href='#section4') team
+                li.mobile__item
+                  a.mobile__link(href='#section5') contact
 
-    //nav.menu#menu
-        ul.menu__list.list.animation
-          li.list__item
-            a.list__link(href='#section1') services
-          li.list__item
-            a.list__link(href='#section2') clients
-          li.list__item
-            a.list__link(href='#section3') team
-          li.list__item
-            a.list__link(href='#section4') contact
-      //nav.mobile
-        button.menu_button Toggle
-            .icon
-          .mobile_menu
-            ul.mobile__list
-              li.list__item
-                a.list__link(href='#section1') services
-              li.list__item
-                a.list__link(href='#section2') clients
-              li.list__item
-                a.list__link(href='#section3') team
-              li.list__item
-                a.list__link(href='#section4') contact
-      // http://jsfiddle.net/BeUFb/326/ - videobotton
-    .fullscreen-bg
-      video.fullscreen-bg__video(loop='loop', muted='muted', autoplay='autoplay', poster='source/logo.jpg')
 
-        source(src='source/GOPR1014.mp4', type='video/mp4')
-        source(src='video/GOPR1014.ogv', type='video/ogg')
-    article
+    .wrapper
+      article
         h2.title_small we are a
         h1.title_big
           | video production
           =' '
           br
-          |company
-        .play__botton
-          a.play__link()
-            img.play__image(width='64', src='source/play.png')
+          | company
+        a#play-video.playpause(href='#')
+          span
+        #video-overlay.video-overlay
+          a.video-overlay-close ×
+
+
+
+
+
 
 
 
 
   .section#section1
     .container
-      .about
-        h1.about__main about us
-        .about__line
-      .about__article
-        h3.about__info 21 films is a full-service creative agency that produces content for screens of all sizes.
-        p.about__text From concept deploiment and manager throught production and post, we offer full-service video solution for the worlds landing brands and agencies.
-
+          section.cd-intro.main
+            .cd-intro-content.mask.mov
+              h1.main__text.about__main(data-content='about us')
+                span
+                  | about us
+              .cutline.about__cutline
+                .main__line.about__line.mov
+              .action-wrapper.article.article__about.mov
+                h3.article__info 21 films is a full-service creative agency that produces content for screens of all sizes.
+                p.article__text From concept deploiment and manager throught production and post, we offer full-service video solution for the worlds landing brands and agencies.
 
 
 
   .section#section2
     .container
-      .services
-        .services__line
-        h1.services__main services
-      .services__article
-        h3.services__info we specialize in blending language, imagery, music, color, and sound into stories thst deliver emotion and impact.
-        p.services__text There are meni different style of video, but in the end it`s all sbout finding the style that for you story need. We`re here to help you figure that out.
-    ul.services__list
-      li.services__item
-        a.services__link
-          .services__group
-            .services__sprite.sprite__commercial
-            h3.services__name
-                              |commercial/
-                              =' '
-                              br
-                              |advertising
-          p.services__about_text There are meni different style of video, but in the end it`s all sbout finding the style that for you story need. We`re here to help you figure that out.
-      li.services__item
-        a.services__link
-          .services__group
-            .services__sprite.sprite__photo
-            h3.services__name
-                              |photo
-                              =''
-                              br
-                              |production
-          p.services__about_text There are meni different style of video, but in the end it`s all sbout finding the style that for you story need. We`re here to help you figure that out.
-      li.services__item
-        a.services__link
-          .services__group
-            .services__sprite.sprite__video
-            h3.services__name
-                              |corporate
-                              =''
-                              br
-                              |videos
-          p.services__about_text There are meni different style of video, but in the end it`s all sbout finding the style that for you story need. We`re here to help you figure that out.
-      li.services__item
-        a.services__link
-          .services__group.col-xl-2
-            .services__sprite.sprite__creative
-            h3.services__name creative
-          p.services__about_text There are meni different style of video, but in the end it`s all sbout finding the style that for you story need. We`re here to help you figure that out.
+      .cd-intro.main.service__main
+        .cd-intro-content.mask.mov
 
+          h1.main__text.service__main_text.col-lg-5.offset-lg-7.col-md-7.offset-md-6(data-content='services')
+            span
+              | services
+          .cutline.service__cutline
+            .main__line.service__line.mov
+          .action-wrapper.article.service__article.mov
+            h3.article__info we specialize in blending language, imagery, music, color, and sound into stories thst deliver emotion and impact.
+            p.article__text.service__text There are meni different style of video, but in the end it`s all sbout finding the style that for you story need. We`re here to help you figure that out.
+
+
+    ul#exampleAccordion.service__list(data-children='.item')
+        li.item.service__item
+          a.service__link(data-toggle='collapse', data-parent='#exampleAccordion', href='#exampleAccordion1', aria-expanded='true', aria-controls='exampleAccordion1')
+            .service__group.mov
+              .service__sprite.sprite__commercial
+              h3.service__name
+                                |commercial/
+                                =' '
+                                br
+                                |advertising
+            #exampleAccordion1.collapse(role='tabpanel')
+              p.service__about_text There are meni different style of video, but in the end it`s all sbout finding the style that for you story need. We`re here to help you figure that out.
+
+        li.item.service__item
+          a.service__link(data-toggle='collapse', data-parent='#exampleAccordion', href='#exampleAccordion2', aria-expanded='true', aria-controls='exampleAccordion2')
+            .service__group.mov
+              .service__sprite.sprite__photo
+              h3.service__name
+                                |photo
+                                =''
+                                br
+                                |production
+            #exampleAccordion2.collapse(role='tabpanel')
+              p.service__about_text There are meni different style of video, but in the end it`s all sbout finding the style that for you story need. We`re here to help you figure that out.
+
+        li.item.service__item
+          a.service__link(data-toggle='collapse', data-parent='#exampleAccordion', href='#exampleAccordion3', aria-expanded='true', aria-controls='exampleAccordion3')
+            .service__group.mov
+              .service__sprite.sprite__video
+              h3.service__name
+                                |corporate
+                                =''
+                                br
+                                |videos
+            #exampleAccordion3.collapse(role='tabpanel')
+              p.service__about_text There are meni different style of video, but in the end it`s all sbout finding the style that for you story need. We`re here to help you figure that out.
+
+        li.item.service__item
+          a.service__link(data-toggle='collapse', data-parent='#exampleAccordion', href='#exampleAccordion4', aria-expanded='true', aria-controls='exampleAccordion4')
+            .service__group.mov
+              .service__sprite.sprite__creative
+              h3.service__name creative
+            #exampleAccordion4.collapse(role='tabpanel')
+              p.service__about_text There are meni different style of video, but in the end it`s all sbout finding the style that for you story need. We`re here to help you figure that out.
 
 
   .section#section3
     .container
-      .friends
-        .friends__container
-          h1.friends__main friends
-        .friends__container
-          h1.friends__main and clients
-          .friends__line
-      img.friends__image(src='source/friends.jpg', width='100%')
+      .cd-intro.main.friends__main.friends
+        .cd-intro-content.mask.friends__cd-intro-content.mov
+
+          h1.main__text.friends__text.col-md-6.col-sm-12.col-xs-12(data-content='friends')
+            span
+              | friends
+          h1.main__text.friends__text.col-md-7.col-sm-12.col-xs-12(data-content='and clients')
+            span
+              | and clients
+        .cutline.friends__cutline
+          .main__line.friends__line.mov
+        .action-wrapper.friends__image_wrapper
+          img.friends__image.mov(src='source/friends.jpg', width='100%')
 
       #carouselExampleIndicators.carousel.slide(data-ride='carousel')
         .carousel-inner(role='listbox')
@@ -203,7 +197,144 @@ body
 
 
 
-   .section#section4 Some section4
+  .section#section4
+    .container
+      .row
+        .cd-intro.main
+          .cd-intro-content.mask.friends__cd-intro-content.mov
+            h1.main__text.team__text.offset-md-7.col-md-5.offset-lg-8.col-lg-4.col-sm-4.col-xs-12(data-content='team')
+              span
+                | team
+
+          .cutline
+            .main__line.team__line.mov
+
+
+      .teamall
+        .row
+          .team.col-md-6
+            .team__photo_wrap
+              img.team__photo.elem.mov(src='source/chehov.jpg')
+            .team__photocut.mov
+            .team__info
+              .row
+                span.team__name.mov Anton Chehov
+              .row
+                span.team__position.mov
+                  strong DOP
+                  =' '
+                  |Director
+
+          .team.col-md-6
+            .team__photo_wrap
+              img.team__photo.mov(src='source/barbul.jpg')
+            .team__photocut.mov
+            .team__info
+              .row
+                span.team__name.mov Barbul Ivan
+              .row
+                span.team__position.mov
+                  strong Creative
+                  =' '
+                  |Founder
+
+        .row
+          .team.col-md-6
+            .team__photo_wrap
+              img.team__photo.mov(src='source/jarosh.jpg')
+            .team__photocut.mov
+            .team__info
+              .row
+                span.team__name.mov Jarosh Artem
+              .row
+                span.team__position.mov
+                  strong Director
+                  =' '
+                  |Editor
+
+          .team.col-md-6
+            .team__photo_wrap
+              img.team__photo.mov(src='source/podolskiy.jpg')
+            .team__photocut.mov
+            .team__info
+              .row
+                span.team__name.mov Podolskiy Vladimir
+              .row
+                span.team__position.mov
+                  strong Producer
+
+
+
+
+  .section#section5
+    .container
+      .cd-intro.main.contact__main
+        .cd-intro-content.mask.mov
+          h1.main__text.contact__text.col-md-6.col-sm-12.col-xs-12(data-content='contact us')
+            span
+              | contact us
+          .cutline.contact__cutline
+            .main__line.contact__line.mov
+          .action-wrapper.article.contact__article.mov
+            h3.article__info.contact__info our main office is based in kiev. get in touch, come visit for a cup of coffee. we always look for interesting projects
+            p.article__text.contact__adress
+              |21@films.com
+              =''
+              br
+              |+38 067 420 91 12
+              =''
+              br
+              |21 Artema str., Kiev, Ukraine, 01030
+
+
+  .section#section6
+    .mailtous
+
+      form.mailtous__form(data-toggle='validator', role='form')
+        span.mailtous__name keep in touch
+        .form-group
+          input#inputEmail.form-control(type='email', placeholder='', data-error='Bruh, that email address is invalid', required='')
+          label.control-label(for='inputEmail') email
+          span.outline_form.mov
+          .help-block.with-errors
+        .form-group.form-message
+          textarea#inputMessage.form-control(type='message', rows="1", data-minlength='6', placeholder='', required='')
+          label.control-label.control-label__message(for='inputMessage') message
+          span.outline_form.mov
+          .help-block.with-errors
+
+        .form-group.form-botton
+          button.btn.btn-default(type='submit') send
+    .footer
+      a.footer__link(href='#')
+        .footer__small
+          span.footer__text I’m from
+          .footer__cicle
+            span.footer__letter a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // jQuery (necessary for Bootstrap's JavaScript plugins)
       script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
       // Include all compiled plugins (below), or include individual files as needed

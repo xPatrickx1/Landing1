@@ -1,151 +1,223 @@
 #section1 {
   background: #fff;
+  height:100vh;
 }
 
-.about {
-  width: 270px;
-  height: 60px;
+.main {
+  width: 100%;
+  height: 100px;
   overflow: hidden;
   vertical-align: inherit;
-  margin: 8% auto;
+  margin: 10% auto 5%;
+  padding: 15px;
 
-  &__main {
-    font-family: 'impact';
+  &__text {
+    font-family: 'anton-regular';
     text-transform: lowercase;
     font-weight: bold;
-    font-size: 7.4rem;
-    display: inline-block;
-    margin: 0;
-    padding: 0;
+    font-size: 4.5em;
+    height: 55px;
+    overflow: hidden;
     text-align: center;
   }
 
   &__line {
     background: #000;
     height: 4px;
-    min-width: 30%;
-    width: 50%;
-    display: inline-block;
-    margin: 12px 70px;
+    position: absolute;
+    display: none;
+    transition-delay: 900ms;
+    width:100%;
+    }
   }
 
-  &__article {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 500px;
+  .about {
+
+    &__main {
+      margin: 10px auto;
+      padding: 0;
+    }
+
+    &__cutline {
+      width:90%;
+    }
   }
 
-  &__info {
-    text-transform: uppercase;
-    font-size: 1.5em;
-    margin: 30px 0;
-  }
-
-  &__text {
-    font-size: 1.4em;
-  }
+.cutline {
+  position: relative;
+  margin: 0 auto;
+  height: 5px;
+  overflow: hidden;
 }
 
 
 
-@media (min-width: 768px) {
-  .about {
-    width: 350px;
-    height: 67px;
 
-    &__main {
-      font-size: 8.4rem;
-    }
+.article {
+  width: 90%;
+  position: relative;
+  margin: 0 auto;
 
-    &__article {
-      max-width: 500px;
-    }
 
-    &__info {
-      font-size: 1.7em;
+  &__info {
+    text-transform: uppercase;
+    font-size: 1.9em;
+    line-height: 1.2em;
+    padding: 30px 0;
+  }
+
+  &__text {
+    font-size: 1.2em;
+    margin-top: 20px;
+    padding: 30px 0;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+
+  .main {
+
+    &__line {
+      display: none;
     }
 
     &__text {
-      font-size: 1.5em;
+      display: inline-block;
     }
   }
+
+  .about {
+
+    &__main {
+      margin-bottom: 0;
+    }
   }
+
+  .cutline {
+    margin: -10px auto;
+  }
+
+  .article__about {
+    float: right;
+    width: 55%;
+    top: 20px;
+  }
+
+}
 
 
 
 @media screen and (min-width: 992px) {
 
-.about {
-  width: 100%;
-  height: 76px;
-  margin: 10% 10% 50px;
-
-  &__main {
-    font-size: 9.4rem;
-}
-
-  &__line {
-    min-width: 30%;
-    width: 40%;
-    margin: 12px 70px;
-  }
-
-  &__article {
-    width: 40%;
-    float: right;
-    right: 7%;
-    position: relative;
-  }
-
-  &__info {
-    font-size: 2.3em;
-  }
-
-  &__text {
-    font-size: 1.4em;
-  }
-}
-}
-
-
-@media screen and (min-width: 1200px) {
-
-  .about {
+  .main {
     width: 100%;
-    height: 76px;
-    overflow: hidden;
-    vertical-align: inherit;
-    margin: 10% 10% 50px;
+    margin: 10% auto 5%;
+    padding: 15px;
 
-    &__main {
-      text-transform: lowercase;
-      font-weight: bold;
-      font-size: 9.4rem;
+    &__text {
+      font-size: 6em;
+      height: 70px;
+      margin-bottom: 0;
+
+    }
+
+    .inline {
+      width:100%;
+      position: absolute;
       display: inline-block;
+      left: 0;
+      height: 2px;
+      bottom: 0;
     }
 
     &__line {
       background: #000;
       height: 4px;
-      min-width: 30%;
-      width: 50%;
-      display: inline-block;
-      margin: 12px 70px;
+      //min-width: 30%;
+      //width: 50%;
+      display: none;
+    }
+  }
+
+
+  .about {
+
+    &__main {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+
+  .cutline {
+    margin: -10px auto;
+  }
+
+  .article {
+    width: 46%;
+    right:8%;
+  }
+
+}
+
+
+@media screen and (min-width: 1200px) {
+
+  .main {
+    width: 100%;
+    height: 100px;
+
+
+    &__text {
+      font-size: 6em;
+      height: 70px;
+
     }
 
-    &__article {
-      width: 40%;
+    &__line {
+      position: absolute;
+      display: none;
+      transition-delay: 900ms;
+      background-color: #000;
+      height: 4px;
+      width:100%;
+    }
+  }
+
+
+  .about {
+
+    &__main {
+      margin-left: 8%;
+      padding: 0;
+    }
+  }
+
+
+  .article {
+    width: 40%;
+
+    &__about {
       float: right;
-      right: 14%;
-      position: relative;
+      right: 13%;
+    }
+
+    &__service {
+      float: left;
+      left: 200px;
     }
 
     &__info {
-      font-size: 2.3em;
+      font-size: 1.9em;
+      line-height: 1.2em;
+      padding-top: 80px;
     }
 
     &__text {
-      font-size: 1.4em;
+      font-size: 1.2em;
+      margin-top: 20px;
+      padding: 70px 0 0;
     }
   }
 }

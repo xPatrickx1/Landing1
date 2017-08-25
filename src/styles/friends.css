@@ -1,45 +1,40 @@
+#section3 {
+  height: 100%;
+  margin-bottom: 20%;
+}
 .friends {
-  width: 90%;
-  margin-left: 100px;
-}
-.friends__container {
   width: 100%;
-  overflow: hidden;
-  vertical-align: inherit;
-  margin: 25px 0;
 }
-.friends__main {
-  font-family: 'anton-regular';
-  text-transform: lowercase;
-  font-weight: bold;
-  font-size: 5.6em;
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  height: 70px;
-  overflow: hidden;
-}
-.friends__line {
-  background: #000;
-  height: 4px;
-  min-width: 30%;
-  width: 46%;
-  display: inline-block;
+.friends__image_wrapper {
   position: relative;
-  left: 60px;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin: 20px auto;
 }
 .friends__image {
-  margin-top: 50px;
+  top: -110%;
+  position: absolute;
+  width: 100%;
+}
+.friends__text {
+  text-align: center;
+  margin-top: 20px;
+}
+.friends__image {
+  padding-top: 50px;
 }
 .carousel {
-  width: 92%;
+  width: 100%;
   margin: 0 auto;
+  opacity: 0;
+  position: relative;
+  top: -200px;
 }
 .carousel-inner {
   width: 75%;
-  min-width: 770px;
-  margin: 0 auto;
+  min-width: 300px;
+  margin: 40px auto;
 }
 .carousel-item {
   height: 300px;
@@ -47,29 +42,29 @@
 }
 .friend__logo {
   background: url(../../source/pepsifriend.png) no-repeat;
-  width: 180px;
+  width: 130px;
   -webkit-background-size: contain;
   background-size: contain;
-  margin-left: 6%;
-  margin-top: 100px;
+  margin: 0 auto;
   position: relative;
 }
 .friend__about {
-  width: 62%;
+  width: 80%;
   position: absolute;
-  font-size: 1.2em;
-  left: 40%;
-  top: 50px;
+  font-size: 0.9em;
+  left: 10%;
+  top: 80px;
+  margin: 0 auto;
 }
 .person {
   position: absolute;
-  bottom: 34px;
-  right: 20%;
+  bottom: 0;
+  right: 27%;
   height: 60px;
 }
 .person__avatar {
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
   background: url("../../source/pepsiface.png") no-repeat;
   -webkit-background-size: contain;
   background-size: contain;
@@ -79,8 +74,140 @@
 .person__name {
   text-transform: uppercase;
   display: inline-block;
-  font-size: 2.2em;
-  bottom: 20px;
+  font-size: 1.5em;
+  bottom: 10px;
   left: 20px;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .friends {
+    width: 100%;
+    margin: 0;
+  }
+  .friends__text {
+    text-align: left;
+    margin-bottom: 0;
+  }
+  .carousel {
+    width: 100%;
+  }
+  .carousel-inner {
+    width: 75%;
+    min-width: 550px;
+  }
+  .friend__logo {
+    width: 130px;
+    margin-top: 120px;
+    margin-left: 6%;
+  }
+  .friend__about {
+    font-size: 1em;
+    width: 60%;
+    left: 40%;
+    top: 50px;
+  }
+  .person {
+    right: 15%;
+    bottom: 20px;
+  }
+  .person__avatar {
+    width: 45px;
+    height: 45px;
+  }
+  .person__name {
+    font-size: 1.8em;
+    bottom: 10px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .friends__text {
+    text-align: left;
+  }
+  .carousel {
+    width: 92%;
+  }
+  .carousel-inner {
+    width: 75%;
+    min-width: 650px;
+  }
+  .friend__logo {
+    width: 180px;
+  }
+  .friend__about {
+    font-size: 1.1em;
+    top: 70px;
+  }
+  .person {
+    right: 17%;
+    bottom: 0;
+  }
+  .person__avatar {
+    width: 55px;
+    height: 55px;
+  }
+  .person__name {
+    font-size: 2em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .friends {
+    width: 90%;
+    height: 100%;
+  }
+  .friends__text {
+    text-align: left;
+    left: 100px;
+  }
+  .friends__image_wrapper {
+    position: relative;
+    width: 90%;
+    height: 300px;
+    overflow: hidden;
+    margin: 20px auto;
+  }
+  .friends__image {
+    top: -110%;
+    position: absolute;
+    width: 100%;
+  }
+  .carousel {
+    width: 92%;
+    margin: 0 auto;
+  }
+  .carousel-inner {
+    width: 75%;
+    min-width: 770px;
+    margin: 0 auto;
+  }
+  .carousel-item {
+    height: 300px;
+    background: #fff;
+  }
+  .friend__logo {
+    width: 180px;
+    margin-left: 6%;
+    margin-top: 100px;
+  }
+  .friend__about {
+    width: 60%;
+    font-size: 1.2em;
+    left: 40%;
+    top: 50px;
+  }
+  .person {
+    bottom: 34px;
+    right: 20%;
+    height: 60px;
+  }
+  .person__avatar {
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+  }
+  .person__name {
+    display: inline-block;
+    font-size: 2.2em;
+    bottom: 20px;
+    left: 20px;
+  }
 }

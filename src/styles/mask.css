@@ -1,0 +1,485 @@
+/* --------------------------------
+
+Primary style
+
+
+
+/* --------------------------------
+
+General Style
+
+-------------------------------- */
+.cd-intro {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* vertically align its content */
+    display: table;
+    background: #fff;
+    overflow: hidden;
+}
+
+.cd-intro-content {
+    /* vertically align inside its parent */
+    display: block;
+    background: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.cd-intro-content h1 {
+
+}
+
+.cd-intro-content h3 {
+    text-transform: uppercase;
+    color: #000;
+}
+
+.cd-intro-content p {
+    margin: 1em 0;
+    color: #000;
+}
+.cd-intro-content .action-wrapper {
+    display: inline-block;
+}
+.cd-intro-content .action-wrapper::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+
+
+.cd-intro-content h1,
+.cd-intro-content h1 span,
+.cd-intro-content p,
+.cd-intro-content h3 {
+    opacity: 0;
+    -webkit-animation-duration: 0.8s;
+    -moz-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    -webkit-animation-delay: 0.3s;
+    -moz-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+.no-cssanimations .cd-intro-content h1, .no-cssanimations
+.cd-intro-content h1 span, .no-cssanimations
+.cd-intro-content p, .no-cssanimations
+.cd-intro-content .cd-btn {
+    opacity: 1;
+}
+
+
+/* --------------------------------
+
+Cut
+
+-------------------------------- */
+.cut.cd-intro-content h1 {
+    position: relative;
+    /* overwrite default style */
+    opacity: 1;
+    color: transparent;
+}
+.cut.cd-intro-content h1 span {
+    /* 2 span elements are used to create the cut effect */
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    overflow: hidden;
+    color: #ffffff;
+}
+.cut.cd-intro-content h1 span:first-of-type {
+    top: 0;
+}
+.cut.cd-intro-content h1 span:last-of-type {
+    bottom: 0;
+}
+.cut.cd-intro-content h1 span:first-of-type::before,
+.cut.cd-intro-content h1 span:last-of-type::after {
+    /* span:first-of-type::before - top half of the text */
+    /* span:last-of-type::after - bottom half of the text */
+    content: attr(data-content);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    color: #000;
+}
+.cut.cd-intro-content h1 span:first-of-type::before {
+    top: 0;
+}
+.cut.cd-intro-content h1 span:last-of-type::after {
+    bottom: 0;
+}
+
+.cut.cd-intro-content .cd-btn {
+    /* overwrite default style */
+    margin-right: 0;
+    border-radius: 0;
+}
+
+.cut.cd-intro-content h1 span,
+.cut.cd-intro-content p,
+.cut.cd-intro-content .cd-btn {
+    -webkit-animation-duration: 0.6s;
+    -moz-animation-duration: 0.6s;
+    animation-duration: 0.6s;
+}
+
+
+
+.cut.cd-intro-content h1 span:first-of-type {
+    -webkit-animation-delay: 0.4s;
+    -moz-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.cut.cd-intro-content p {
+    -webkit-animation-delay: 0.5s;
+    -moz-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+
+/* --------------------------------
+
+Reveal
+
+-------------------------------- */
+.reveal.cd-intro-content h1 {
+    position: relative;
+    /* overwrite default style */
+    opacity: 1;
+    /* <h1> text is not visible - it is used only as a container for the ::after element */
+    color: transparent;
+    overflow: hidden;
+}
+.reveal.cd-intro-content h1::after {
+    /* this is the animated text */
+    content: attr(data-content);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: #000;
+    opacity: 0;
+    -webkit-animation-name: cd-reveal-up;
+    -moz-animation-name: cd-reveal-up;
+    animation-name: cd-reveal-up;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+.no-cssanimations .reveal.cd-intro-content h1::after {
+    opacity: 1;
+}
+@media only screen and (min-width: 768px) {
+    .reveal.cd-intro-content h1 {
+        -webkit-transform: translateY(5px);
+        -moz-transform: translateY(5px);
+        -ms-transform: translateY(5px);
+        -o-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+}
+/*
+.reveal.cd-intro-content p,
+.reveal.cd-intro-content h3 {
+    position: relative;
+    margin: 0;
+    padding: 1em;
+    background-color: #202e4a;
+    -webkit-animation-name: cd-reveal-down;
+    -moz-animation-name: cd-reveal-down;
+    animation-name: cd-reveal-down;
+}*/
+@media only screen and (min-width: 1170px) {
+    .reveal.cd-intro-content p {
+        padding: 1em 1.6em;
+    }
+}
+
+.reveal.cd-intro-content h1::after,
+.reveal.cd-intro-content p,
+.reveal.cd-intro-content h3 {
+    -webkit-animation-duration: 0.4s;
+    -moz-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-delay: 0.7s;
+    -moz-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+}
+
+.reveal.cd-intro-content .action-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+.reveal.cd-intro-content .action-wrapper::before {
+    /* this is the loading bar */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #202e4a;
+    -webkit-animation: cd-loading 0.4s 0.3s backwards;
+    -moz-animation: cd-loading 0.4s 0.3s backwards;
+    animation: cd-loading 0.4s 0.3s backwards;
+}
+.reveal.cd-intro-content .action-wrapper .cd-btn {
+    display: block;
+    opacity: 1;
+    max-width: 200px;
+    margin: 1em auto 0;
+}
+@media only screen and (min-width: 768px) {
+    .reveal.cd-intro-content .action-wrapper .cd-btn {
+        display: inline-block;
+        margin: 0 0 0 1em;
+    }
+}
+
+@-webkit-keyframes cd-reveal-up {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+@-moz-keyframes cd-reveal-up {
+    0% {
+        opacity: 1;
+        -moz-transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: translateY(0);
+    }
+}
+@keyframes cd-reveal-up {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        -o-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@-webkit-keyframes cd-reveal-down {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+@-moz-keyframes cd-reveal-down {
+    0% {
+        opacity: 1;
+        -moz-transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: translateY(0);
+    }
+}
+@keyframes cd-reveal-down {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@-webkit-keyframes cd-loading {
+    0% {
+        -webkit-transform: scaleX(0);
+    }
+    100% {
+        -webkit-transform: scaleX(1);
+    }
+}
+@-moz-keyframes cd-loading {
+    0% {
+        -moz-transform: scaleX(0);
+    }
+    100% {
+        -moz-transform: scaleX(1);
+    }
+}
+@keyframes cd-loading {
+    0% {
+        -webkit-transform: scaleX(0);
+        -moz-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+        -o-transform: scaleX(0);
+        transform: scaleX(0);
+    }
+    100% {
+        -webkit-transform: scaleX(1);
+        -moz-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+        -o-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}
+/* --------------------------------
+
+Mask
+
+-------------------------------- */
+.mask.cd-intro-content h1 {
+    position: relative;
+    /* overwrite default style */
+    opacity: 1;
+    /* <h1> text is not visible - it is used only as a container for the ::after element */
+    color: transparent;
+    overflow: hidden;
+}
+.animation.mask.cd-intro-content h1::after {
+    /* this is the animated text */
+    content: attr(data-content);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: #000;
+    -webkit-animation-name: cd-reveal-up;
+    -moz-animation-name: cd-reveal-up;
+    animation-name: cd-reveal-up;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+.mask.cd-intro-content h1 span {
+    position: relative;
+    display: inline-block;
+    opacity: 1;
+}
+.animation.mask.cd-intro-content h1 span::before {
+    /* this is the loading bar */
+    content: '';
+    position: absolute;
+    top: calc(100% + 8px);
+    left: -1em;
+    height: 2px;
+    width: calc(100% + 2em);
+    background-color: #ffffff;
+    -webkit-animation: cd-loading-mask 1s 0.3s both;
+    -moz-animation: cd-loading-mask 1s 0.3s both;
+    animation: cd-loading-mask 1s 0.3s both;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .mask.cd-intro-content h1 {
+    }
+    .mask.cd-intro-content h1 span::before {
+        top: calc(100% + 18px);
+    }
+}
+
+.animation.mask.cd-intro-content p,
+.animation.mask.cd-intro-content h3{
+    position: relative;
+    margin: 0;
+    -webkit-animation-name: cd-reveal-down;
+    -moz-animation-name: cd-reveal-down;
+    animation-name: cd-reveal-down;
+}
+@media only screen and (min-width: 768px) {
+    .mask.cd-intro-content p {
+        padding-top: 20px;
+    }
+}
+
+.mask.cd-intro-content h1::after {
+    -webkit-animation-duration: 0.4s;
+    -moz-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-delay: 0.7s;
+    -moz-animation-delay: 0.7s;
+    animation-delay: 0.3s;
+}
+
+
+
+.mask.cd-intro-content p,
+.mask.cd-intro-content h3 {
+    -webkit-animation-duration: 0.4s;
+    -moz-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-delay: 0.7s;
+    -moz-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+}
+
+
+.mask.cd-intro-content .action-wrapper {
+    overflow: hidden;
+}
+
+@-webkit-keyframes cd-loading-mask {
+    0%, 100% {
+        -webkit-transform: scaleX(0);
+    }
+    40%, 60% {
+        -webkit-transform: scaleX(1);
+    }
+}
+@-moz-keyframes cd-loading-mask {
+    0%, 100% {
+        -moz-transform: scaleX(0);
+    }
+    40%, 60% {
+        -moz-transform: scaleX(1);
+    }
+}
+@keyframes cd-loading-mask {
+    0%, 100% {
+        -webkit-transform: scaleX(0);
+        -moz-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+        -o-transform: scaleX(0);
+        transform: scaleX(0);
+    }
+    40%, 60% {
+        -webkit-transform: scaleX(1);
+        -moz-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+        -o-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}

@@ -1,0 +1,271 @@
+#section6 {
+  background: url("../../source/cititram.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  margin: 0;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+#section6:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+.footer {
+  width: 100%;
+  height: 70px;
+  background: #000;
+  position: absolute;
+  bottom: 0;
+}
+.footer__link {
+  width: 100%;
+  height: 70px;
+  display: block;
+}
+.footer__link:hover {
+  cursor: default;
+}
+.footer__link:hover .footer__text {
+  color: #535353;
+  transition: 1s;
+}
+.footer__link:hover .footer__cicle {
+  background: #535353;
+  transition: 1s;
+}
+.footer__small {
+  width: 180px;
+  float: right;
+  margin: 20px 40px;
+}
+.footer__text {
+  font-size: 1.2em;
+  font-weight: 900;
+  display: inline-block;
+  margin: 0 20px;
+  color: #2F2F2F;
+}
+.footer__cicle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #2F2F2F;
+  position: absolute;
+  display: inline-block;
+}
+.footer__letter {
+  color: #000;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 2.6em;
+  font-weight: 900;
+  top: -17px;
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+}
+.mailtous {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin: 50px auto;
+}
+.mailtous__name {
+  color: #e2e2e2;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.7em;
+}
+.mailtous__form {
+  position: relative;
+}
+.mailtous .form-group {
+  position: relative;
+  margin: 30px 10px;
+  width: 320px;
+}
+.mailtous .form-botton {
+  margin: 30px 0;
+}
+.mailtous .form-message {
+  margin: 70px 10px 40px;
+}
+.mailtous .form-control + .control-label {
+  display: block;
+  position: relative;
+  pointer-events: none;
+  top: -20px;
+  line-height: 0;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+}
+.mailtous .control-label {
+  color: #e2e2e2;
+  font-size: 1.2em;
+  font-weight: 300;
+}
+.mailtous .form-control:focus + .control-label,
+.mailtous .form-control:valid + .control-label {
+  -webkit-transform: scale(0.8) translateY(-25px) translateX(-35px);
+          transform: scale(0.8) translateY(-25px) translateX(-35px);
+  color: #e2e2e2;
+}
+.mailtous .form-control {
+  font-size: 1.2em;
+  border-radius: 0;
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  background: none;
+  color: #e2e2e2;
+}
+.mailtous .outline_form {
+  position: absolute;
+  display: inline-block;
+  transition-delay: 900ms;
+  background-color: #e2e2e2;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+}
+.mailtous .animation.outline_form {
+  -webkit-animation: setWidth 0.5s ease forwards;
+          animation: setWidth 0.5s ease forwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.mailtous input,
+.mailtous textarea {
+  outline: none;
+}
+.mailtous .has-error .outline_form {
+  background: red;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation: setWidth2 0.5s forwards;
+          animation: setWidth2 0.5s forwards;
+}
+@-webkit-keyframes setWidth2 {
+  0% {
+    width: 100%;
+    background: black;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+    background: red;
+  }
+}
+@keyframes setWidth2 {
+  0% {
+    width: 100%;
+    background: black;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+    background: red;
+  }
+}
+.mailtous .list-unstyled {
+  position: absolute;
+}
+.mailtous .form-control:focus,
+.mailtous .form-control:active {
+  border: none;
+}
+.mailtous .btn {
+  width: 320px;
+  height: 50px;
+  margin: 0;
+  background: none;
+}
+.mailtous .btn-default {
+  position: relative;
+  transition: 0.7s all;
+  letter-spacing: 1px;
+  border: 0;
+  background: #e2e2e2;
+  border-radius: 0;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 900;
+  z-index: 1;
+}
+.mailtous .btn-default:after {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 50px;
+  background-color: #4c4c4c;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  transition: width 0.5s ease;
+  z-index: -1;
+}
+.mailtous .btn-default:hover,
+.mailtous .btn-default:focus,
+.mailtous .btn-default:active,
+.mailtous .btn-default:active:hover,
+.mailtous .btn-default:active:focus {
+  background-color: #e2e2e2;
+  color: #e2e2e2;
+}
+.mailtous .btn-default:hover:after,
+.mailtous .btn-default:focus:after,
+.mailtous .btn-default:active:after,
+.mailtous .btn-default:active:focus:after,
+.mailtous .btn-default:active:hover:after {
+  width: 100%;
+}
+.mailtous .contact_form .btn-default {
+  width: 100%;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  #section6 {
+    height: 84vh;
+  }
+  .mailtous {
+    width: 530px;
+    height: 530px;
+    float: left;
+    left: 12%;
+  }
+  .mailtous__form {
+    position: relative;
+    top: 80px;
+    left: 30px;
+  }
+  .mailtous__name {
+    font-size: 2em;
+  }
+  .mailtous .form-group {
+    margin: 30px 10px;
+    width: 530px;
+  }
+  .mailtous .form-message {
+    margin: 130px 10px 60px;
+  }
+  .mailtous .form-field {
+    width: 290px;
+    font-size: 1.2em;
+  }
+  .mailtous .btn {
+    width: 530px;
+    height: 70px;
+  }
+  .mailtous .btn-default:after {
+    height: 70px;
+  }
+}

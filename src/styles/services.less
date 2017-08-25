@@ -2,31 +2,29 @@
   height: 100%;
 }
 
-.services {
+.service {
   width: 270px;
-  height: 60px;
+  height: 100px;
   overflow: hidden;
   vertical-align: inherit;
   margin: 8% auto;
 
-  &__main {
+  &__main_text {
     font-family: 'anton-regular';
     text-transform: lowercase;
     font-weight: bold;
-    font-size: 7.4em;
+    font-size: 4.5em;
+    height: 55px;
     display: inline-block;
-    margin: 0;
-    padding: 0;
+    margin-bottom: 0;
+    overflow: hidden;
     text-align: center;
   }
 
   &__line {
     background: #000;
     height: 4px;
-    min-width: 30%;
-    width: 50%;
-    display: none;
-    margin: 12px 70px;
+    width: 100%;
   }
 
   &__article {
@@ -38,30 +36,27 @@
   &__info {
     text-transform: uppercase;
     font-size: 1.5em;
-    margin: 30px 0;
   }
 
   &__text {
     font-size: 1.4em;
+    margin-top: 40px;
   }
 
   &__list {
     list-style: none;
-    position: relative;
-    padding: 40px 0;
+    padding:0;
   }
 
   &__item {
-    display: block;
     position: relative;
     width: 100%;
-    height: 150px;
+    //height: 150px;
   }
 
   &__link {
     width: 100%;
     height: 150px;
-    display: block;
   }
 
   &__group {
@@ -69,6 +64,7 @@
     height: 150px;
     margin: 0 auto;
     padding-top: 10px;
+    display: none;
 
 
   }
@@ -93,13 +89,16 @@
 
 
   &__about_text {
-    display: none;
+    //display: none;
+    //display: inline-block;
     color: #000;
     width: 80%;
-    text-align: right;
+    text-align: center;
     font-size: 1.4em;
     position: relative;
+    margin: 0 auto 50px;
     top: 20px;
+    opacity: 1;
   }
 }
 
@@ -121,26 +120,109 @@
     background-position: 0 -206px;
   }
 }
-.services__link:hover {
-  background: #000;
+
+/*
+.service__item .collapsed {
   color: #4c4c4c;
   text-decoration: none;
+  height: 350px;
 
-  .services__item {
-    height: 400px;
+  .service__item {
+    height: 350px;
   }
 
-  .services__sprite {
+  .service__sprite {
     -webkit-filter: invert(100%);
     filter: invert(30%);
   }
 
-  .services__name {
+  .service__name {
     color: #4c4c4c;
   }
-  .services__about_text {
+  .service__about_text {
     display: inline-block;
     color: #878787;
+    opacity: 1;
+    transition: 0.5s ease;
+  }
+}
+
+
+.service__item:after {
+  position: absolute;
+  content: '';
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 170px;
+  background-color: #000000;
+  transform-origin: left;
+  -webkit-transition: width 0.5s ease;
+  -moz-transition: width 0.5s ease;
+  -ms-transition: width 0.5s ease;
+  -o-transition: width 0.5s ease;
+  transition: width 0.5s ease;
+  z-index: -1;
+}
+
+.service__item:hover, .service__item:focus, .service__item:active, .service__item:active:hover, .service__item:active:focus {
+  //background-color: #000;
+  color: #e2e2e2;
+}
+.service__item:hover:after, .service__item:focus:after, .service__item:active:after, .service__item:active:focus:after, .service__item:active:hover:after {
+  width: 100%;
+}
+*/
+
+@media screen and (min-width: 992px) {
+  .service__link:hover {
+    color: #4c4c4c;
+    text-decoration: none;
+    height: 350px;
+
+    .service__item {
+      height: 350px;
+    }
+
+    .service__sprite {
+      -webkit-filter: invert(100%);
+      filter: invert(30%);
+    }
+
+    .service__name {
+      color: #4c4c4c;
+    }
+    .service__about_text {
+      display: inline-block;
+      color: #878787;
+      opacity: 1;
+      transition: 0.5s ease;
+    }
+  }
+
+  .service__link:after {
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 170px;
+    background-color: #000000;
+    transform-origin: left;
+    -webkit-transition: width 0.5s ease;
+    -moz-transition: width 0.5s ease;
+    -ms-transition: width 0.5s ease;
+    -o-transition: width 0.5s ease;
+    transition: width 0.5s ease;
+    z-index: -1;
+  }
+
+  .service__link:hover, .service__link:focus, .service__link:active, .service__link:active:hover, .service__link:active:focus {
+    color: #e2e2e2;
+  }
+
+  .service__link:hover:after, .service__link:focus:after, .service__link:active:after, .service__link:active:focus:after, .service__link:active:hover:after {
+    width: 100%;
   }
 }
 
@@ -148,21 +230,15 @@
 
 
 
+@media screen and (min-width: 768px) {
 
-
-
-
-@media (min-width: 768px) {
-  .services {
+  .service {
     width: 350px;
     height: 67px;
 
-    &__main {
-      font-size: 8.4rem;
-    }
-
     &__article {
-      max-width: 500px;
+      width: 60%;
+      margin: 20px auto;
     }
 
     &__info {
@@ -170,13 +246,14 @@
     }
 
     &__text {
-      font-size: 1.5em;
+      font-size: 1.2em;
+    }
+
+    &__about_text {
+      color: #000;
+      width: 60%;
     }
   }
-}
-
-
-@media (min-width: 768px) {
 }
 
 
@@ -187,21 +264,30 @@
 
 @media screen and (min-width: 992px) {
 
-  .services {
+  .service {
     width: 100%;
-    height: 76px;
+    height: 100px;
     margin: 10% 5% 50px;
 
     &__main {
-      font-size: 9.4rem;
+      z-index: -4;
+    }
 
+    &__main_text {
+      font-size: 6em;
+      height: 75px;
+      margin-bottom: 0;
+    }
+
+    &__cutline {
+      width: 80%;
     }
 
     &__line {
-      min-width: 30%;
-      width: 40%;
-      margin: 12px 70px;
-      display: inline-block;
+      background: #000;
+      height: 4px;
+      width: 100%;
+      display: none;
     }
 
     &__article {
@@ -209,18 +295,19 @@
       float: left;
       left: 13%;
       position: relative;
+      top: 20px;
     }
 
     &__info {
-      font-size: 2.3em;
+      font-size: 1.9em;
     }
 
     &__text {
-      font-size: 1.4em;
+      font-size: 1.2em;
     }
 
     &__list {
-      top: -80px;
+      margin-top: -200px;
     }
 
     &__item {
@@ -247,24 +334,31 @@
 
     &__name {
       font-size: 1.2em;
-  }
+    }
 
     &__about_text {
-      font-size: 1.2em;
-      top: 25px;
-      display: none;
-      color: #000;
-      width: 80%;
+      display: inline-block;
       text-align: right;
+      font-size: 1.2em;
+      color: #000;
+      width: 32%;
       float: right;
       right: 40%;
       position: relative;
+      top: 25px;
+      opacity: 0;
     }
   }
-}
 
+  .service__link:hover {
+    height: 170px;
 
-.sprite {
+    .service__item {
+      height: 170px;
+    }
+  }
+
+  .sprite {
 
     &__commercial {
       background-position: 0 0;
@@ -279,52 +373,66 @@
     }
 
     &__creative {
-      background-position: 0 -210px;
+      background-position: 0 -206px;
     }
+  }
+
 }
+
+
+
+
 
 @media screen and (min-width: 1200px) {
 
-  .services {
+  .service {
     width: 100%;
-    height: 76px;
-    overflow: hidden;
+    height: 100px;
     vertical-align: inherit;
-    margin: 10% 0 50px;
+    margin: 10% 0 60px;
 
-    &__main {
-      text-transform: lowercase;
-      font-weight: bold;
-      font-size: 7.4em;
+    &__main_text {
+      font-size: 6em;
+      height: 75px;
       display: inline-block;
+      margin-bottom: 0;
+      right:40px;
+
+    }
+
+    &__cutline {
+      width:80%;
     }
 
     &__line {
       background: #000;
       height: 4px;
-      min-width: 30%;
-      width: 50%;
-      display: inline-block;
-      padding: 7px 70px;
+      width: 100%;
+      display: none;
     }
 
     &__article {
-      width: 40%;
+      width: 35%;
       float: left;
-      left: 100px;
+      left: 10%;
       position: relative;
+      margin: 0;
+      top: 20px;
+
     }
 
     &__info {
-      font-size: 2.3em;
+      font-size: 1.9em;
+      line-height: 1.2em;
     }
 
     &__text {
-      font-size: 1.4em;
+      font-size: 1.2em;
+      margin-top: 40px;
     }
 
     &__list {
-      top: -80px;
+      margin-top: -200px;
     }
 
     &__item {
@@ -336,8 +444,9 @@
     }
 
     &__group {
+      display: none;
       position: absolute;
-      right: 23%;
+      right: 20%;
       top: 20px;
       width: 200px;
       height: 200px;
@@ -353,9 +462,11 @@
     }
 
     &__about_text {
+      display: inline-block;
+      text-align: right;
       width: 32%;
       right: 45%;
-      font-size: 1.4em;
+      font-size: 1.2em;
       top: 50px;
     }
   }
@@ -378,4 +489,18 @@
       background-position: 0 -270px;
     }
   }
-}
+
+  .service__link:hover {
+    color: #4c4c4c;
+    text-decoration: none;
+    height: 220px;
+
+    .service__item {
+      height: 220px;
+    }
+  }
+
+  .service__link:after {
+    height: 220px;
+  }
+  }
