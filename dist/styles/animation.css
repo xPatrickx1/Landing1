@@ -94,7 +94,7 @@
   -webkit-animation-delay: 0.7s;
           animation-delay: 0.7s;
 }
-.carousel {
+.animation.carousel {
   -webkit-animation: setCarousel 0.4s ease forwards;
           animation: setCarousel 0.4s ease forwards;
   transition-delay: 0s;
@@ -104,14 +104,12 @@
           animation-delay: 0.6s;
 }
 .animation.service__group {
-  display: block;
-  -webkit-animation: flipInY 0.4s ease forwards;
-          animation: flipInY 0.4s ease forwards;
-  transition-delay: 0s;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  opacity: 1;
+  -webkit-animation: flipInY 0.8s ease forwards;
+          animation: flipInY 0.8s ease forwards;
+  transition-delay: 1s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
 }
 @-webkit-keyframes flipInY {
   from {

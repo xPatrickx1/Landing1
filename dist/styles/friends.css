@@ -21,9 +21,6 @@
   text-align: center;
   margin-top: 20px;
 }
-.friends__image {
-  padding-top: 50px;
-}
 .carousel {
   width: 100%;
   margin: 0 auto;
@@ -149,7 +146,7 @@
 }
 @media screen and (min-width: 1200px) {
   .friends {
-    width: 90%;
+    width: 100%;
     height: 100%;
   }
   .friends__text {
@@ -161,7 +158,7 @@
     width: 90%;
     height: 300px;
     overflow: hidden;
-    margin: 20px auto;
+    margin: 70px auto;
   }
   .friends__image {
     top: -110%;

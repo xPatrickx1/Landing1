@@ -46,7 +46,7 @@ $(document).ready(function() {
         $('.mov').each(function(){
             var imagePos = $(this).offset().top;
             var topOfWindow = $(window).scrollTop();
-            if (imagePos < topOfWindow+screen.height+400) {
+            if (imagePos < topOfWindow+screen.height-300) {
                 $(this).addClass('animation');
             }
             if (imagePos > topOfWindow+screen.height) {

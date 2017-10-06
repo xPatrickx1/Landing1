@@ -51,7 +51,6 @@
   &__item {
     position: relative;
     width: 100%;
-    //height: 150px;
   }
 
   &__link {
@@ -64,9 +63,8 @@
     height: 150px;
     margin: 0 auto;
     padding-top: 10px;
-    display: none;
-
-
+    display: block;
+    opacity: 0;
   }
 
   &__name {
@@ -89,8 +87,6 @@
 
 
   &__about_text {
-    //display: none;
-    //display: inline-block;
     color: #000;
     width: 80%;
     text-align: center;
@@ -121,58 +117,7 @@
   }
 }
 
-/*
-.service__item .collapsed {
-  color: #4c4c4c;
-  text-decoration: none;
-  height: 350px;
 
-  .service__item {
-    height: 350px;
-  }
-
-  .service__sprite {
-    -webkit-filter: invert(100%);
-    filter: invert(30%);
-  }
-
-  .service__name {
-    color: #4c4c4c;
-  }
-  .service__about_text {
-    display: inline-block;
-    color: #878787;
-    opacity: 1;
-    transition: 0.5s ease;
-  }
-}
-
-
-.service__item:after {
-  position: absolute;
-  content: '';
-  right: 0;
-  top: 0;
-  width: 0;
-  height: 170px;
-  background-color: #000000;
-  transform-origin: left;
-  -webkit-transition: width 0.5s ease;
-  -moz-transition: width 0.5s ease;
-  -ms-transition: width 0.5s ease;
-  -o-transition: width 0.5s ease;
-  transition: width 0.5s ease;
-  z-index: -1;
-}
-
-.service__item:hover, .service__item:focus, .service__item:active, .service__item:active:hover, .service__item:active:focus {
-  //background-color: #000;
-  color: #e2e2e2;
-}
-.service__item:hover:after, .service__item:focus:after, .service__item:active:after, .service__item:active:focus:after, .service__item:active:hover:after {
-  width: 100%;
-}
-*/
 
 @media screen and (min-width: 992px) {
   .service__link:hover {
@@ -444,7 +389,6 @@
     }
 
     &__group {
-      display: none;
       position: absolute;
       right: 20%;
       top: 20px;
